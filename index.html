@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dink Sushi | Experiência Premium em Sushi</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="assets/images/logo.png" alt="Dink Sushi Logo">
+            </div>
+            
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#combos" class="nav__link" data-translate="combos">Combos</a></li>
+                    <li class="nav__item"><a href="#promocoes" class="nav__link" data-translate="promotions">Promoções</a></li>
+                    <li class="nav__item"><a href="#tipos" class="nav__link" data-translate="sushiTypes">Tipos de Sushi</a></li>
+                    <li class="nav__item"><a href="#bebidas" class="nav__link" data-translate="drinks">Bebidas</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar..." class="search-input" data-translate-placeholder="search">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn--outline" id="loginBtn" data-translate="login">Login</button>
+                    <button class="btn btn--primary" id="registerBtn" data-translate="register">Cadastro</button>
+                </div>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <span>|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#combos" class="mobile-nav__link" data-translate="combos">Combos</a></li>
+            <li class="mobile-nav__item"><a href="#promocoes" class="mobile-nav__link" data-translate="promotions">Promoções</a></li>
+            <li class="mobile-nav__item"><a href="#tipos" class="mobile-nav__link" data-translate="sushiTypes">Tipos de Sushi</a></li>
+            <li class="mobile-nav__item"><a href="#bebidas" class="mobile-nav__link" data-translate="drinks">Bebidas</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <button class="btn btn--outline" id="mobileLoginBtn" data-translate="login">Login</button>
+            <button class="btn btn--primary" id="mobileRegisterBtn" data-translate="register">Cadastro</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__overlay"></div>
+            <div class="container">
+                <div class="hero__content" data-aos="fade-up">
+                    <h1 class="hero__title" data-translate="heroTitle">Experimente o melhor do sushi em um ambiente de alto padrão</h1>
+                    <div class="hero__buttons">
+                        <a href="#menu" class="btn btn--primary" data-translate="viewMenu">Ver Cardápio</a>
+                        <a href="#order" class="btn btn--outline" data-translate="orderNow">Faça seu Pedido</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="aboutUs">Quem Somos</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="about__content">
+                    <div class="about__text" data-aos="fade-right">
+                        <p data-translate="aboutText1">O Dink Sushi nasceu da paixão pela culinária japonesa e do desejo de oferecer uma experiência gastronômica única e sofisticada.</p>
+                        <p data-translate="aboutText2">Fundado em 2015, nosso restaurante combina técnicas tradicionais japonesas com toques contemporâneos, criando pratos que são verdadeiras obras de arte.</p>
+                        <p data-translate="aboutText3">Nossos chefs são mestres na arte do sushi, com anos de experiência e treinamento especializado no Japão. Utilizamos apenas ingredientes frescos e de alta qualidade, selecionados diariamente para garantir o sabor autêntico e refinado que nos caracteriza.</p>
+                    </div>
+                    <div class="about__image" data-aos="fade-left">
+                        <img src="assets/images/restaurante-interior.png" alt="Dink Sushi Interior">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Combos Section -->
+        <section class="menu-section" id="combos">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="combos">Combos</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-card" data-aos="fade-up">
+                        <div class="menu-card__image">
+                            <img src="assets/images/combo-2.png" alt="Combo Especial">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title" data-translate="comboSpecial">Combo Especial</h3>
+                            <p class="menu-card__description" data-translate="comboSpecialDesc">Seleção premium com 32 peças incluindo sashimis, niguiris e hossomakis.</p>
+                            <p class="menu-card__price">R$ 189,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-card__image">
+                            <img src="assets/images/combo-3.png" alt="Combo Família">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title" data-translate="comboFamily">Combo Família</h3>
+                            <p class="menu-card__description" data-translate="comboFamilyDesc">50 peças variadas perfeitas para compartilhar, com hot rolls e temakis.</p>
+                            <p class="menu-card__price">R$ 249,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-card__image">
+                            <img src="assets/images/combo-1.png" alt="Combo Executivo">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title" data-translate="comboExecutive">Combo Executivo</h3>
+                            <p class="menu-card__description" data-translate="comboExecutiveDesc">16 peças selecionadas com sashimi de salmão e atum, ideal para almoço.</p>
+                            <p class="menu-card__price">R$ 89,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions Section -->
+        <section class="menu-section" id="promocoes">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="promotions">Promoções</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-card" data-aos="fade-up">
+                        <div class="menu-card__image">
+                            <img src="assets/images/promo-1.jpeg" alt="Happy Hour">
+                            <div class="menu-card__badge" data-translate="discount">30% OFF</div>
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title" data-translate="happyHour">Happy Hour</h3>
+                            <p class="menu-card__description" data-translate="happyHourDesc">De segunda a quinta, das 17h às 19h, 30% de desconto em todos os rolls.</p>
+                            <p class="menu-card__price"><span class="old-price">R$ 120,00</span> R$ 84,00</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-card__image">
+                            <img src="assets/images/sushi-1.png" alt="Festival de Temaki">
+                            <div class="menu-card__badge" data-translate="discount">2 por 1</div>
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title" data-translate="temakiFestival">Festival de Temaki</h3>
+                            <p class="menu-card__description" data-translate="temakiFestivalDesc">Às terças, compre um temaki e ganhe outro de igual valor ou menor.</p>
+                            <p class="menu-card__price">A partir de R$ 39,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sushi Types Section -->
+        <section class="menu-section" id="tipos">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="sushiTypes">Tipos de Sushi</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-card" data-aos="fade-up">
+                        <div class="menu-card__image">
+                            <img src="assets/images/sushi-1.png" alt="Sashimi">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title">Temaki</h3>
+                            <p class="menu-card__description" data-translate="temakiDesc">Enrolado em formato de cone feito com alga marinha (nori). O cone é recheado principalmente com arroz para sushi (shari) e uma variedade de ingredientes frescos ou grelhados.
+
+</p>
+                            <p class="menu-card__price">A partir de R$ 49,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-card__image">
+                            <img src="assets/images/sushi-2.png" alt="Nigiri">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title">Hot roll</h3>
+                            <p class="menu-card__description" data-translate="hotrollDesc">Rolinhos de sushi empanados e fritos</p>
+                            <p class="menu-card__price">A partir de R$ 39,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-card__image">
+                            <img src="assets/images/sushi-3.png" alt="Uramaki">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title">Uramaki</h3>
+                            <p class="menu-card__description" data-translate="uramakiDesc">Roll com arroz por fora e nori por dentro, com diversos recheios.</p>
+                            <p class="menu-card__price">A partir de R$ 45,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drinks Section -->
+        <section class="menu-section" id="bebidas">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="drinks">Bebidas</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-card" data-aos="fade-up">
+                        <div class="menu-card__image">
+                            <img src="assets/images/drink-1.png" alt="Água">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title">Água</h3>
+                            <p class="menu-card__description" data-translate="sakeDesc">Natural e com gás</p>
+                            <p class="menu-card__price">R$ 89,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-card__image">
+                            <img src="assets/images/drink-2.png" alt="Refrigerante">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title">Refrigerantes variados</h3>
+                            <p class="menu-card__description" data-translate="umeshuDesc">Coca-Cola, Fanta e Guaraná.</p>
+                            <p class="menu-card__price">R$ 79,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-card__image">
+                            <img src="assets/images/drink-3.png" alt="Suco">
+                        </div>
+                        <div class="menu-card__content">
+                            <h3 class="menu-card__title" data-translate="greenTea">Sucos naturais</h3>
+                            <p class="menu-card__description" data-translate="greenTeaDesc">Uva, manga, limão, laranja e pêssego.</p>
+                            <p class="menu-card__price">R$ 12,90</p>
+                            <button class="btn btn--sm" data-translate="order">Pedir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contato">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="contactUs">Fale com a gente</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="contact__content">
+                    <div class="contact__info" data-aos="fade-right">
+                        <div class="contact__item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3 data-translate="openingHours">Horário de Atendimento</h3>
+                                <p data-translate="openingDays">Segunda a Sábado</p>
+                                <p data-translate="openingTimes">11h às 22h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3 data-translate="phone">Telefone</h3>
+                                <p>(11) 9999-9999</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3 data-translate="address">Endereço</h3>
+                                <p data-translate="addressLine">Av. Alamedas, 1000 - Belo Horizonte, MG</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__map" data-aos="fade-left">
+                        <img src="assets/images/map.jpg" alt="Mapa de localização">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h2 class="modal__title" data-translate="login">Login</h2>
+            
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail" data-translate="email">E-mail</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword" data-translate="password">Senha</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="btn btn--primary" data-translate="login">Login</button>
+                    <a href="#" class="form-link" data-translate="forgotPassword">Esqueceu a senha?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h2 class="modal__title" data-translate="register">Cadastro</h2>
+            
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="registerName" data-translate="name">Nome</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerEmail" data-translate="email">E-mail</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPassword" data-translate="password">Senha</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerConfirmPassword" data-translate="confirmPassword">Confirmar Senha</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="btn btn--primary" data-translate="register">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__column">
+                    <h3 data-translate="quickMenu">Menu Rápido</h3>
+                    <ul class="footer__links">
+                        <li><a href="#about" data-translate="about">Sobre</a></li>
+                        <li><a href="#contato" data-translate="contact">Contato</a></li>
+                        <li><a href="#" data-translate="privacyPolicy">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 data-translate="paymentMethods">Formas de Pagamento</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 data-translate="securitySeals">Selos de Segurança</h3>
+                    <div class="security-seals">
+                        <img src="assets/images/security-seal-1.png" alt="Selo de Segurança">
+                        <img src="assets/images/security-seal-2.png" alt="Compra Protegida">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="copyright" data-translate="copyright">© 2024 Dink Sushi. Todos os direitos reservados a Rafael Santos.</p>
+                <a href="https://www.linkedin.com/in/rafael-santos-8a0b44313/" class="linkedin-link" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/translations.js"></script>
+</body>
+</html>
